@@ -7,4 +7,8 @@ defmodule SwaggerLibTest.Accounts do
     |> User.changeset(attrs)
     |> Repo.insert()
   end
+
+  def get_user(id) do
+    Repo.get(User, id)
+  end
 end
