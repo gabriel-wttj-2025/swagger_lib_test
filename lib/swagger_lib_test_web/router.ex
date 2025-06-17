@@ -27,6 +27,15 @@ defmodule SwaggerLibTestWeb.Router do
     get "/users/:id", UserController, :show
   end
 
+  def swagger_info do
+    %{
+      info: %{
+        version: "1.0",
+        title: "Swagger Lib Test"
+      }
+    }
+  end
+
   # Other scopes may use custom stacks.
   # scope "/api", SwaggerLibTestWeb do
   #   pipe_through :api
